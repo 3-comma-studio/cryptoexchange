@@ -3,12 +3,12 @@ module Cryptoexchange::Exchanges
     module Services
       class Pairs < Cryptoexchange::Services::Pairs
         def pairs_url
-          "https://raw.githubusercontent.com/balancer-labs/balancer-exchange/master/src/deployed.json"
+          "https://raw.githubusercontent.com/balancer-labs/assets/master/generated/dex/registry.homestead.json"
         end
 
         def fetch
           data = fetch_via_api(pairs_url)
-          assets_symbols = data["mainnet"]["tokens"].map { |r| r["symbol"] }
+          assets_symbols = data["tokens"].map { |k,v| v["symbol"] }
           adapt(assets_symbols)
         end
 
