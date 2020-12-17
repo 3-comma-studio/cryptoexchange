@@ -1,12 +1,14 @@
 module Cryptoexchange
   module Models
     class MarketPair
-      attr_accessor :base, :target, :market, :inst_id
+      attr_accessor :base, :target, :market, :inst_id, :target_address, :base_address
       attr_reader :base_raw, :target_raw, :contract_interval, :inst_id
 
       def initialize(params = {})
         @base   = params[:base]
+        @base_address = params[:base_address]
         @target = params[:target]
+        @target_address = params[:target_address]
         @market = params[:market]
         @inst_id = params[:inst_id] || ""
         @contract_interval = params[:contract_interval] || ""
