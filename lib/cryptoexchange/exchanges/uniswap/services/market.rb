@@ -24,8 +24,8 @@ module Cryptoexchange::Exchanges
         end
 
         def adapt_all(output)
-          dai_eth_ticker = output.select { |ticker| ticker["poolName"] == "Uniswap DAI-WETH"}.first
-          eth_price_in_usd = dai_eth_ticker["assets"][0]["balance"] / dai_eth_ticker["assets"][1]["balance"]
+          eth_usdt_ticker = output.select { |ticker| ticker["poolName"] == "Uniswap WETH-USDT"}.first
+          eth_price_in_usd = eth_usdt_ticker["assets"][1]["balance"] / eth_usdt_ticker["assets"][0]["balance"]
 
           output.map do |pair|
             base = pair["assets"][0]["symbol"]
