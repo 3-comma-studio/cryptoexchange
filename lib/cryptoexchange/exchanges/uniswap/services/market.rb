@@ -20,7 +20,7 @@ module Cryptoexchange::Exchanges
         end
 
         def ticker_url
-          "#{Cryptoexchange::Exchanges::Uniswap::Market::API_URL}/exchanges?platform=uniswap-v2&key=#{Cryptoexchange::Exchanges::Uniswap::Market.api_key}"
+          "#{Cryptoexchange::Exchanges::Uniswap::Market::API_URL}/exchanges?platform=uniswap-v2&api-key=#{Cryptoexchange::Exchanges::Uniswap::Market.api_key}"
         end
 
         def adapt_all(output)
