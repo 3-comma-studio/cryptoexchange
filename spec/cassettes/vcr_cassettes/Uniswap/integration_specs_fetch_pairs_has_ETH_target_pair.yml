@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://data-api.defipulse.com/api/v1/blocklytics/pools/v1/exchanges?api-key=test_key&platform=uniswap-v2
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - data-api.defipulse.com
+      User-Agent:
+      - http.rb/5.0.0.pre
+  response:
+    status:
+      code: 429
+      message: Too Many Requests
+    headers:
+      Date:
+      - Wed, 20 Jan 2021 21:49:53 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Set-Cookie:
+      - AWSALB=Qrkgl+ESTMwjtPAYlvF8SLgjLRMUE8FmL0cfF2/iRerG2UHVFLWwfekFHRyFCchetzemfAgejLHkTVmjweISfFIMYwV4LvzlWHbNzCtpUwi8EXqZRfiXhAxNBai+;
+        Expires=Wed, 27 Jan 2021 21:49:50 GMT; Path=/
+      - AWSALBCORS=Qrkgl+ESTMwjtPAYlvF8SLgjLRMUE8FmL0cfF2/iRerG2UHVFLWwfekFHRyFCchetzemfAgejLHkTVmjweISfFIMYwV4LvzlWHbNzCtpUwi8EXqZRfiXhAxNBai+;
+        Expires=Wed, 27 Jan 2021 21:49:50 GMT; Path=/; SameSite=None; Secure
+      - __cfduid=d59c42b0ba2e9d0e742defa09afc119e81611179390; expires=Fri, 19-Feb-21
+        21:49:50 GMT; path=/; domain=.defipulse.com; HttpOnly; SameSite=Lax; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET,POST,PUT,DELETE
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-None-Match, X-Requested-With
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - no-cache
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 07c35f8e3600005f97d1ab8000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - JUpqTIsZe7NrILKt4S7HCPiBqmlQqTLT"}],"max_age":604800}
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=%2F3qrjvYDzRvWg8q4ZZbXW260Awc9M0J8bZ0gH3Byy5XO045QpF2jQDZlYd59ziXB9C1XUsatD2nBsSve%2FYsK'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 614c01f6bb735f97-LAS
+    body:
+      encoding: UTF-8
+      string: Wrong api-key provided!
+    http_version:
+  recorded_at: Wed, 20 Jan 2021 21:49:53 GMT
+recorded_with: VCR 4.0.0
