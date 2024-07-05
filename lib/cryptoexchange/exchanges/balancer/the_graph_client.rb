@@ -4,7 +4,7 @@ require "graphql/client/http"
 module Cryptoexchange::Exchanges
   module Balancer
     class TheGraphClient < Cryptoexchange::Models::Market
-      HTTP = GraphQL::Client::HTTP.new("https://api.thegraph.com/subgraphs/name/balancer-labs/balancer") do
+      HTTP = GraphQL::Client::HTTP.new("https://gateway-arbitrum.network.thegraph.com/api/02384c524966b1f8b6591fcae4650f70/subgraphs/id/C4ayEZP2yTXRAB8vSaTrgN4m9anTe9Mdm2ViyiAuV9TV") do
       end
       Schema = GraphQL::Client.load_schema(HTTP)
       Client = GraphQL::Client.new(schema: Schema, execute: HTTP)
